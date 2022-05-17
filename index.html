@@ -6,210 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Calculadora Hcode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        button,
-        hr,
-        input {
-            overflow: visible
-        }
-
-        progress,
-        sub,
-        sup {
-            vertical-align: baseline
-        }
-
-        [type=checkbox],
-        [type=radio],
-        legend {
-            box-sizing: border-box;
-            padding: 0
-        }
-
-        html {
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%
-        }
-
-        body {
-            margin: 0;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin: .67em 0
-        }
-
-        hr {
-            box-sizing: content-box;
-            height: 0
-        }
-
-        code,
-        kbd,
-        pre,
-        samp {
-            font-family: monospace, monospace;
-            font-size: 1em
-        }
-
-        a {
-            background-color: transparent
-        }
-
-        abbr[title] {
-            border-bottom: none;
-            text-decoration: underline;
-            text-decoration: underline dotted
-        }
-
-        b,
-        strong {
-            font-weight: bolder
-        }
-
-        small {
-            font-size: 80%
-        }
-
-        sub,
-        sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative
-        }
-
-        sub {
-            bottom: -.25em
-        }
-
-        sup {
-            top: -.5em
-        }
-
-        img {
-            border-style: none
-        }
-
-        button,
-        input,
-        optgroup,
-        select,
-        textarea {
-            font-family: inherit;
-            font-size: 100%;
-            line-height: 1.15;
-            margin: 0
-        }
-
-        button,
-        select {
-            text-transform: none
-        }
-
-        [type=button],
-        [type=reset],
-        [type=submit],
-        button {
-            -webkit-appearance: button
-        }
-
-        [type=button]::-moz-focus-inner,
-        [type=reset]::-moz-focus-inner,
-        [type=submit]::-moz-focus-inner,
-        button::-moz-focus-inner {
-            border-style: none;
-            padding: 0
-        }
-
-        [type=button]:-moz-focusring,
-        [type=reset]:-moz-focusring,
-        [type=submit]:-moz-focusring,
-        button:-moz-focusring {
-            outline: ButtonText dotted 1px
-        }
-
-        fieldset {
-            padding: .35em .75em .625em
-        }
-
-        legend {
-            color: inherit;
-            display: table;
-            max-width: 100%;
-            white-space: normal
-        }
-
-        textarea {
-            overflow: auto
-        }
-
-        [type=number]::-webkit-inner-spin-button,
-        [type=number]::-webkit-outer-spin-button {
-            height: auto
-        }
-
-        [type=search] {
-            -webkit-appearance: textfield;
-            outline-offset: -2px
-        }
-
-        [type=search]::-webkit-search-decoration {
-            -webkit-appearance: none
-        }
-
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            font: inherit
-        }
-
-        details {
-            display: block
-        }
-
-        summary {
-            display: list-item
-        }
-
-        [hidden],
-        template {
-            display: none
-        }
-
-        .outer {
-            display: table;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-
-        .middle {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-         @font-face {
-            font-family: 'Digital-7';
-            src: url('digital-7.ttf');
-        }
-        svg{
-            font-family: 'Digital-7', sans-serif;
-        }
-
-        #calculadora-hcode {
-            margin: 0 auto;
-        } 
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
-
     <div class="outer">
         <div class="middle">
-            <svg id="calculadora-hcode" version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600"
-                xml:space="preserve">
+            <svg id="calculadora-hcode" version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 600 600"
+                enable-background="new 0 0 600 600" xml:space="preserve">
                 <switch>
                     <g i:extraneous="self">
                         <g id="base">
@@ -818,7 +623,9 @@
                                 <path fill="#BCC49A" d="M173.458,179.502c-4.962,0-9-4.039-9-9v-68.125c0-4.961,4.038-9,9-9h254.966c4.963,0,9,4.039,9,9v68.125
                     					c0,4.961-4.037,9-9,9H173.458z" />
                                 <text id="display" text-anchor="end" transform="matrix(1 0 0 1 420 164)" font-family="'Digital-7'" font-size="50">0</text>
+                                <!-- HORA DA CALCULADORA -->
                                 <text id="hora" text-anchor="start" transform="matrix(1 0 0 1 175 113)" font-family="'Digital-7'" font-size="17.0079"></text>
+                                <!-- DATA DA CALCULADORA -->
                                 <text id="data" text-anchor="end" transform="matrix(1 0 0 1 420 113)" font-family="'Digital-7'" font-size="17.0079"></text>
                                 <path fill="#E0E0E0" d="M428.424,91.385H173.458c-6.616,0-12,5.385-12,12v68.125c0,6.615,5.384,12,12,12h254.966
                     					c6.617,0,12-5.385,12-12v-68.125C440.424,96.77,435.041,91.385,428.424,91.385z M437.424,171.51c0,4.961-4.037,9-9,9H173.458
@@ -1785,30 +1592,33 @@
                     					c0.574,0.02,0.547-0.222,0.316-0.6c-0.58-0.95-1.449-1.453-2.539-1.463c-1.186-0.011-2.138,0.489-2.748,1.552
                     					c-0.193,0.336-0.182,0.517,0.275,0.508C323.029,63.815,323.826,63.827,324.623,63.827z" />
                                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#EE7B28" d="M276.13,60.684c0.748-0.395,1.36-0.733,2.102-0.749
-                    					c2.474-0.052,4.175,1.527,4.227,4.016c0.036,1.687-0.017,3.376,0.021,5.063c0.012,0.559-0.196,0.711-0.695,0.649
-                    					c-0.169-0.021-0.346-0.023-0.514,0c-0.658,0.094-0.897-0.134-0.871-0.838c0.056-1.514,0.029-3.032,0.008-4.548
-                    					c-0.019-1.397-0.755-2.3-1.925-2.42c-1.123-0.115-2.047,0.67-2.258,2.08c-0.241,1.615-0.118,3.254-0.066,4.878
-                    					c0.029,0.907-0.426,0.842-1.034,0.857c-0.65,0.016-1.034-0.019-1.024-0.882c0.048-4.291,0.053-8.582-0.002-12.872
-                    					c-0.012-0.961,0.516-0.784,1.075-0.805c0.582-0.022,1.021-0.055,0.979,0.799C276.075,57.453,276.13,59,276.13,60.684z"
+                                    c2.474-0.052,4.175,1.527,4.227,4.016c0.036,1.687-0.017,3.376,0.021,5.063c0.012,0.559-0.196,0.711-0.695,0.649
+                                    c-0.169-0.021-0.346-0.023-0.514,0c-0.658,0.094-0.897-0.134-0.871-0.838c0.056-1.514,0.029-3.032,0.008-4.548
+                                    c-0.019-1.397-0.755-2.3-1.925-2.42c-1.123-0.115-2.047,0.67-2.258,2.08c-0.241,1.615-0.118,3.254-0.066,4.878
+                                    c0.029,0.907-0.426,0.842-1.034,0.857c-0.65,0.016-1.034-0.019-1.024-0.882c0.048-4.291,0.053-8.582-0.002-12.872
+                                    c-0.012-0.961,0.516-0.784,1.075-0.805c0.582-0.022,1.021-0.055,0.979,0.799C276.075,57.453,276.13,59,276.13,60.684z"
                                 />
                                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#817C75" d="M295.145,64.79c0.01-2.903,2.183-5.043,5.105-5.028
-                    					c2.861,0.015,5.068,2.259,5.047,5.131c-0.02,2.821-2.291,5.019-5.176,5.01C297.361,69.894,295.135,67.606,295.145,64.79z
-                    					 M300.168,67.856c1.813,0.003,3.086-1.252,3.084-3.04c-0.002-1.721-1.312-3.106-2.967-3.138
-                    					c-1.654-0.032-3.192,1.483-3.209,3.162C297.06,66.478,298.47,67.854,300.168,67.856z" />
+                                    c2.861,0.015,5.068,2.259,5.047,5.131c-0.02,2.821-2.291,5.019-5.176,5.01C297.361,69.894,295.135,67.606,295.145,64.79z
+                                        M300.168,67.856c1.813,0.003,3.086-1.252,3.084-3.04c-0.002-1.721-1.312-3.106-2.967-3.138
+                                    c-1.654-0.032-3.192,1.483-3.209,3.162C297.06,66.478,298.47,67.854,300.168,67.856z" />
                                 <path fill-rule="evenodd" clip-rule="evenodd" fill="#817C75" d="M289.497,69.916c-2.371-0.001-4.232-1.297-4.939-3.375
-                    					c-0.714-2.101-0.065-4.289,1.683-5.673c1.684-1.334,4.103-1.462,5.935-0.313c0.072,0.045,0.153,0.084,0.212,0.143
-                    					c0.279,0.276,0.879,0.568,0.732,0.853c-0.244,0.472-0.764,0.831-1.229,1.147c-0.244,0.166-0.408-0.221-0.612-0.35
-                    					c-1.072-0.679-2.195-0.821-3.315-0.193c-1.157,0.648-1.656,1.708-1.54,3.017c0.106,1.199,0.697,2.114,1.856,2.537
-                    					c1.043,0.381,2.111,0.377,2.99-0.38c0.504-0.435,0.762-0.338,1.172,0.089c0.94,0.979,0.963,0.976-0.199,1.719
-                    					C291.378,69.688,290.443,69.992,289.497,69.916z" />
+                                    c-0.714-2.101-0.065-4.289,1.683-5.673c1.684-1.334,4.103-1.462,5.935-0.313c0.072,0.045,0.153,0.084,0.212,0.143
+                                    c0.279,0.276,0.879,0.568,0.732,0.853c-0.244,0.472-0.764,0.831-1.229,1.147c-0.244,0.166-0.408-0.221-0.612-0.35
+                                    c-1.072-0.679-2.195-0.821-3.315-0.193c-1.157,0.648-1.656,1.708-1.54,3.017c0.106,1.199,0.697,2.114,1.856,2.537
+                                    c1.043,0.381,2.111,0.377,2.99-0.38c0.504-0.435,0.762-0.338,1.172,0.089c0.94,0.979,0.963,0.976-0.199,1.719
+                                    C291.378,69.688,290.443,69.992,289.497,69.916z" />
                             </g>
                         </g>
                     </g>
                 </switch>
             </svg>
-
         </div>
     </div>
+    <!-- ///////////////////////////  SCRIPTS /////////////////////////////-->
+    <!-- CONTROLLER DA CALCULADORA -->
+    <script src="/assets/js/controlle/CalController.js"></script>
+    <script src="/assets/js/caculator.js"></script>
 </body>
 
 </html>
