@@ -39,7 +39,7 @@ class CalcController {
     }
 
     clearEntry() {
-        this._operation.pop()
+        this._operation.pop() //ELEMINA O ULTIMO VALOR DO ARRAY
     }
 
     getLastOperation() {
@@ -52,16 +52,20 @@ class CalcController {
         return (['+', '-', '*', '%', '/'].indexOf(value) > -1)
     }
 
+    setLastOperation(value) {
+        this._operation[this._operation.length - 1] = value
+    }
+
     addOperation(value) {
 
-        console.log(isNaN(this.getLastOperation()));
+        // console.log(isNaN(this.getLastOperation()));
 
-        if (isNaN(this.getLastOperation())) { //SE NÃO FOR UM NUMERO/NUMBER CAI NESSA CONDIÇÃO
+        if (isNaN(this.getLastOperation())) { //SE ULTIMO VALOR INSERIDO NO ARRAY NÃO FOR UM NUMERO/NUMBER CAI NESSA CONDIÇÃO
 
             //SE FOR STRING...
             if (this.isOperator(value)) { //SE O ULTIMO VALOR DO ARRAY FOR UM OPERADOR, TEM Q TROCAR O OPERADOR PELO O NOVO DIGITADO
 
-                this._operation[this._operation.length - 1] = value
+                setLastOperation(value)
 
             } else if (isNaN(value)) {
 
@@ -69,13 +73,22 @@ class CalcController {
                 console.log(value);
 
             } else {
-                this._operation.push(value)
+                this._operation.push(value) //INSERE UM VALOR NO FINAL DO ARRAY
             }
 
-        } else { //SE FOR NUMERO CAI NESSA
+        } else { //SE O ULTIMO VALOR INSERIDO NO ARRAY FOR NUMERO CAI NESSA
+
+            if (this.isOperator(value)) {
+
+                this._operation.push(value)
+
+            } else {
+
+            }
 
             let newValue = this.getLastOperation().toString() + value.toString()
-            this._operation.push(newValue)
+            this.setLastOperation(parseInt(newValue))
+
         }
 
         console.log(this._operation);
